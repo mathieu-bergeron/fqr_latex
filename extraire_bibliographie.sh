@@ -19,17 +19,17 @@ fichier_pdf="$nom_document".pdf
 
 nombre_pages=$(pdftk "$fichier_pdf" dump_data | grep NumberOfPages | cut -d":" -f2 | xargs)
 
-nom_final="NIP_FQR".pdf
+derniere_page=$nombre_pages
+
+nom_NIP="NIP_FQR"
 
 nom_bibliographie="bibliographie"
 
-
-pdftk "$fichier_pdf" cat $nombre_pages output "$nom_bibliographie".pdf
+pdftk "$fichier_pdf" cat $derniere_page output "$nom_bibliographie".pdf
 
 pages_finales="1-$(($nombre_pages - 1))"
 if [ $((pages_finales)) -eq 0 ]; then
-	pages_finales="1-$nombre_pages"
+	pages_finales="1"
 fi;
 
-
-pdftk "$fichier_pdf" cat 1-$(($nombre_pages - 1)) output "$nom_final"
+pdftk "$fichier_pdf" cat "$pages_finales" output "$nom_NIP".pdf
