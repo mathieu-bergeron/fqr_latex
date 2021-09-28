@@ -2,9 +2,15 @@
 
 ## Exemples d'utilisation
 
-Redéfinir les commandes définissant le nombre de page, votre nom et le titre du document:
+### Utiliser la classe
 
         \documentclass{fqr} 
+
+La langue est `french` par défaut, mais on peut aussi utiliser `english`:
+
+        \documentclass[english]{fqr} 
+
+### Définir vos infos
 
         \renewcommand{\nombreDePages}{7}
         \renewcommand{\prenom}{Mathieu}
