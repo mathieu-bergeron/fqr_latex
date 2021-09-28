@@ -1,0 +1,36 @@
+\documentclass{fqr} 
+
+\renewcommand{\nombreDePages}{7}
+\renewcommand{\prenom}{Mathieu}
+\renewcommand{\nom}{Bergeron}
+\renewcommand{\titreDocument}{Description de projet -- recherche collégiale}
+
+
+\usepackage[backend=biber, maxnames=1, babel=other, doi=false, isbn=false, eprint=false]{biblatex}
+\addbibresource{exemple_collegial.bib}
+
+\begin{document}
+
+\section{Contexte de la proposition et revue de littérature}
+
+\cite{Bergeron2021}
+
+
+\section{Problématique\hspace{1pt}(s) et objectifs de la proposition}
+\section{Méthodologie}
+\section{Résultats attendus et plan de gestion des risques}
+\section{Collaborations et partenariats}
+\section{Calendrier des activités et budget de fonctionnement}
+\section{Retombées du projet}
+\section{Renforcement de la capacité en recherche}
+\section{Transfert des connaissances}
+
+\pagebreak
+
+\setcounter{page}{1}
+\renewcommand{\nombreDePages}{1}
+\renewcommand{\section}[2]{}
+
+\printbibliography{}
+
+\end{document}
