@@ -24,7 +24,7 @@
 \PassOptionsToClass{\langue}{article}
 \ProcessOptions\relax
 
-\LoadClass{article}
+\LoadClass[12pt]{article}
 
 \tolerance=10000
 
